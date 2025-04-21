@@ -37,8 +37,8 @@ BuildRequires:	python3-zope.testrunner
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
-BuildRequires:	sphinx-pdg-3
-BuildRequires:	python3-repoze.sphinx.autointerface
+BuildRequires:	sphinx-pdg-2
+BuildRequires:	python-repoze.sphinx.autointerface
 %endif
 Requires:	python-modules >= 1:2.7
 Requires:	python-zope-base
@@ -107,7 +107,7 @@ Dokumentacja API modułu Pythona zope.exceptions.
 %if %{with doc}
 PYTHONPATH=$(pwd)/src \
 %{__make} -C docs html \
-	SPHINXBUILD=sphinx-build
+	SPHINXBUILD=sphinx-build-2
 %endif
 
 %install
